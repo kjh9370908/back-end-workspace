@@ -69,7 +69,7 @@ LIMIT 1;
 -- 부서의 합이 가장 큰 값
 SELECT max(sum__sal) sum_sal
       FROM employee
-      GROIP  BY
+      GROUP  BY
 
 -- 서브쿼리 특징! 쿼리 자체는 직관적! 
 -- 쿼리 속도 중요시! 서브쿼리 상대적으로 느림

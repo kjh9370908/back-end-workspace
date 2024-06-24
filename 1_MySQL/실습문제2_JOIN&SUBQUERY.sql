@@ -17,21 +17,22 @@ SELECT * FROM city; -- city_id, country_id, city
 SELECT * FROM country; -- country_id, country
 
 -- 1. customer 테이블의 first_name이 TRACY인 사람들 조회 
-SELECT *
+SELECT contry_id, city_id, address_id, first_name, last_name
 FROM customer
 WHERE first_name = 'TRACY';
 
 -- 2. 배우 JULIA MCQUEEN이 찍은 영화 제목 조회 (title 기준 정렬 10개까지)
 SELECT film_id
-FROM film_actor
+FROM ac
 WHERE actor_id = 'JULIA MCQUEEN'; 
 
 -- 3. 영화 NOON PAPI에 나오는 배우들의 이름 조회
 SELECT film_actor
-FROM film_actor
+FROM actor_id
 WHERE film_id = 'MOON PAPI';
 
 -- 4. 각 카테고리별 이메일이 JOYCE.EDWARDS@sakilacustomer.org인 고객이 빌린 DVD 대여 수 조회
+
 
 -- 5. 이메일이 JOYCE.EDWARDS@sakilacustomer.org인 고객이 가장 최근에 빌린 영화 제목과 영화 내용을 조회 
 

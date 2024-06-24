@@ -297,8 +297,15 @@ SELECT
 
 -- 8. 보너스를 받지 않은 직원들 중 직급 코드가 J4 또는 J7인 직원들의 
 --    직원명, 직급명, 급여 조회 
+SELECT * FROM employee;
+SELECT  *FROM job;
+
+SELECT emp_name, job_name, salary
+FROM employee
+     jo
 
 -- 9. 부서가 있는 직원들의 직원명, 직급명, 부서명, 근무지역 조회 
+SELECT * FROM employee; 
 
 -- 10. 해외영업팀에 근무하는 직원들의 직원명, 직급명, 부서코드, 부서명 조회 
 

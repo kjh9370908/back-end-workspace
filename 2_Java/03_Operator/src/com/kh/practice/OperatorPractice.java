@@ -9,15 +9,6 @@ public class OperatorPractice {
 	//모든 사람이 연필을 골고루 나눠가지려고 한다. 인원 수와 연필 개수를 입력 받고 
 	//1인당 동일하게 나눠가진 연필 개수와 나눠주고 남은 연필의 개수를 출력하세요.
 	public void method1() {
-		System.out.println("인원 수");
-		int num1 = sc.nextint();
-		
-		System.out.println("연필 개수");
-		int num2 = sc.nextint();
-				
-		
-		
-		
 
 	}
 	

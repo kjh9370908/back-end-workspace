@@ -21,12 +21,13 @@ public class D_Comparison {
 		D_Comparison d = new D_Comparison();
 //		d.method1();
 		d.method2();
+		
 	}
-
+	
 	public void method1() {
 		int a = 10;
 		int b = 25;
-		// syso 컨트롤 스페이스 엔터!
+		
 		System.out.println(a == b); // false
 		System.out.println(a <= b); // true
 		
@@ -37,12 +38,12 @@ public class D_Comparison {
 		
 		// 짝수와 홀수
 		// 2로 나눴을 때 나머지가 0인 경우 == 2로 나누어 떨어진다는 의미 == 짝수
-		//			   나머지가 1인 경우 == 2로 나누어 떨어지지 않음 == 홀수
+		//            나머지가 1인 경우 == 2로 나누어 떨어지지 않음 == 홀수
 		System.out.println("a가 짝수인가? : " + (a % 2 == 0)); // true
-		System.out.println("b가 홀수인가? : " + (b % 2 != 0)); // 
-		System.out.println("b가 홀수인가? : " +  !(b % 2 == 0)); // 
-		System.out.println("b가 홀수인가? : " + (b % 2 ==  1)); //
-		}
+		System.out.println("b가 홀수인가? : " + (b % 2 != 0));
+		System.out.println("b가 홀수인가? : " + !(b % 2 == 0));
+		System.out.println("b가 홀수인가? : " + (b % 2 == 1));
+	}
 	
 	public void method2() {
 		Scanner sc = new Scanner(System.in);
@@ -58,7 +59,11 @@ public class D_Comparison {
 		// 첫번째 수가 짝수입니까?
 		System.out.println(num1 % 2 == 0);
 		
-		System.out.println(num2 > );
-		
+		System.out.println(num2 > 'A'); // A ~ Z : 65 ~ 90, a ~ z : 97 ~ 122
 	}
+
 }
+
+
+
+

@@ -6,18 +6,15 @@ public class VariablePractice {
 	
 	Scanner sc = new Scanner(System.in);
 	
-	
-	
 	public static void main(String[] args) {
-		VariablePractice v = new VariablePractice();	
+		VariablePractice v = new VariablePractice();
 //		v.method1();
 //		v.method2();
-//      v.method3();	
+//		v.method3();
 //		v.method4();
 //		v.method5();
 //		v.method6();
 		v.method7();
-
 	}
 	
 	/*
@@ -31,10 +28,11 @@ public class VariablePractice {
 		int adultPrice = 10000;
 		int teenPrice = 7000;
 		int adultCount = 2;
-		int teenCount  = 3;
+		int teenCount = 3;
 		
-		int total = adultPrice * adultCount; + teenPrice * teenCount;
+		int total = adultPrice * adultCount + teenPrice * teenCount;
 		
+//		System.out.println("총 지불해야 할 금액 : " + (adultPrice * adultCount + teenPrice * teenCount) + "원");
 		System.out.println("총 지불해야 할 금액 : " + total + "원");
 	}
 	
@@ -48,7 +46,6 @@ public class VariablePractice {
 	 * 로 출력하세요.
 	 * */
 	public void method2() {
-		boolean isTrue;
 		int x = 5;
 		int y = 7;
 		int z = 9;
@@ -59,12 +56,13 @@ public class VariablePractice {
 		y = z;
 		z = tmp;
 		
-		System.out.println("x="+ x);
-		System.out.println("y="+ y);
-		System.out.println("x="+ x);
+		System.out.println("x=" + x);
+		System.out.println("y=" + y);
+		System.out.println("z=" + z);
 	}
+	
+	
 
-	Scanner sc = new Scanner(System.in);
 	/*
 	 * 정수 두 개를 입력 받아 두 수의 합(+), 차(-), 곱(*), 나누기(/)한 몫을 출력하세요.
 	 * 
@@ -77,28 +75,16 @@ public class VariablePractice {
 	 * */
 	public void method3() {
 		
-		System.out.print("첫 번째 정수 :");
-	    int num1 = sc.nextInt();
-	    System.out.print("두 번째 정수 : ");
-	    int num2 = sc.nextInt();
-	    
-	    System.out.println("더하기 : " +(num1 + num2));
-	    System.out.println("빼기 : " + (num1 - num2));
-	    System.out.println("곱하기 : " + (num1 * num2));
-	    System.out.println("나누기 몫 : " + (num1 / num2));
+		System.out.print("첫 번째 정수 : ");
+		int num1 = sc.nextInt();
+		System.out.print("두 번째 정수 : ");
+		int num2 = sc.nextInt();
+		
+		System.out.println("더하기 : " + (num1 + num2));
+		System.out.println("빼기 : " + (num1 - num2));
+		System.out.println("곱하기 : " + (num1 * num2));
+		System.out.println("나누기 몫 : " + (num1 / num2));
 	}
-		
-		int a = 23;
-		int b = 7;
-		System.out.print(a + b);
-		System.out.print(a - b);
-		System.out.print(a * b);
-		System.out.print(a / b);
-		
-		
-		
-
-	
 
 	/*
 	 * 키보드로 가로, 세로 값을 입력 받아 사각형의 면적과 둘레를 계산하여 출력하세요.
@@ -119,12 +105,12 @@ public class VariablePractice {
 		double area = num1 * num2;
 		double size = (num1 + num2) * 2;
 		
-		System.out.printf("면적 : %f\n", area );
-		System.out.printf("둘레 : %f" + size);
+		System.out.printf("면적 : %.2f\n", area);
+		System.out.printf("둘레 : %.1f", size);
 	}
 
 	/*
-	 * 영어 문자열 값을 입력 받아 문자에서 첫번째, 두번째, 마지막(문자열.length()) 글자를 출력하세요.
+	 * 영어 문자열 값을 입력 받아 문자에서 첫번째, 두번째, 마지막 글자(문자열.length())를 출력하세요.
 	 * 
 	 * 문자열을 입력하세요 : apple
 	 * 첫번째 문자 : a
@@ -133,11 +119,11 @@ public class VariablePractice {
 	 * */
 	public void method5() {
 		System.out.print("문자열을 입력하세요 : ");
-		String  word =  sc.nextLine();
+		String word = sc.nextLine();
 		
-		System.out.println("첫번째 문자" + word.charAt(0));
-		System.out.println("두번째 문자" + word.charAt(1));
-		System.out.println("마지막 문자" + word.charAt(word.length()-1));
+		System.out.println("첫번째 문자 : " + word.charAt(0));
+		System.out.println("두번째 문자 : " + word.charAt(1));
+		System.out.println("마지막 문자 : " + word.charAt(word.length()-1));
 	}
 
 	/*
@@ -148,17 +134,15 @@ public class VariablePractice {
 	 * B unicode : 66
 	 * */
 	public void method6() {
-		System.out.println("문자 : ");
+		System.out.print("문자 : ");
 		char ch = sc.nextLine().charAt(0);
 		
 		int num = ch;
 		
-		char ch2 =(char)  (num + 1);
-		
+		char ch2 = (char) (num + 1);
+	
 		System.out.println(ch + " unicode : " + num);
-		System.out.println(ch2 + "B unicode : " + (int)ch2);
-
-
+		System.out.println(ch2 + " unicode : " + (int)ch2);
 	}
 	
 	/*
@@ -171,19 +155,17 @@ public class VariablePractice {
 	 * 평균 : 72.67
 	 * */
 	public void method7() {
-		
 		System.out.print("국어 : ");
 		int kScore = sc.nextInt();
 		System.out.print("영어 : ");
 		int eScore = sc.nextInt();
 		System.out.print("수학 : ");
 		int mScore = sc.nextInt();
-
-		int sum = kScore + eScore + mScroe;
+		
+		int sum = kScore + eScore + mScore;
 		
 		System.out.println("총점 : " + sum);
-		System.out.printf("평균 :%.2f", + ((double)sum / 3));
-		System.out.println("평균 : ");
+		System.out.printf("평균 : %.2f", ((double)sum / 3));
 	}
 
 }

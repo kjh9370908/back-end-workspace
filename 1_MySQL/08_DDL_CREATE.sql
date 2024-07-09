@@ -283,7 +283,7 @@ INSERT INTO mem_grade(grade_name) VALUES('특별회원');
 
 
 
-FROM member
+FROM mem
 JOIN men_grade ON (graidaaa
 
 /*

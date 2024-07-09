@@ -134,7 +134,8 @@ SELECT * FROM dept_copy;
     
     -- 삭제하고 싶다면 자식 테이블 먼저 삭제 후 부모 테이블 삭제 가능!
 */
- DROP TABLE member;
+ 
+DROP TABLE member;
  ALTER 
  DROP TABLE member;
 CREATE TABLE member(

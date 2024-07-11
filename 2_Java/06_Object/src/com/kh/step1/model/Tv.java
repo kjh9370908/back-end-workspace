@@ -2,6 +2,8 @@ package com.kh.step1.model;
 
 public class Tv {
 	
+	/// mvc 중요: m: model v:view c:controller
+	
 	// TV 기능이 더 있지만 당장 프로그래밍화 하는데 필요한 속성과 기능만
 	// 선택하여 작성하는 것을 추상화!
 	

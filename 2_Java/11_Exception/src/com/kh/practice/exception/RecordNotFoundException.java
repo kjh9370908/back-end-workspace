@@ -1,6 +1,6 @@
 package com.kh.practice.exception;
 
-public class RecordNotFoundException extends Exception{
+public class RecordNotFoundException extends Exception {
 
 	public RecordNotFoundException() {
 		this("회원 정보가 없어서 에러 발생!");
@@ -10,6 +10,4 @@ public class RecordNotFoundException extends Exception{
 		super(message);
 	}
 
-	
-	
 }

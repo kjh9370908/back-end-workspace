@@ -8,8 +8,8 @@ import java.util.Vector;
 public class B_Other {
 	
 	/*
-	 * Vector 
-	 *  - 동기화된(synchronized) 메서드로 구성 (개념은 스레드에서)
+	 * Vector
+	 * - 동기화된(synchronized) 메서드로 구성 (개념은 스레드에서~)
 	 * */
 	public void method1() {
 		Vector v = new Vector();
@@ -32,7 +32,6 @@ public class B_Other {
 		
 		System.out.println("size : " + v.size()); // 3
 		System.out.println("capacity : " + v.capacity()); // 10
-		
 	}
 	
 	// 스택(Stack) : 마지막에 저장한 것을 제일 먼저 꺼내는 LIFO(Last In First Out) 구조
@@ -51,13 +50,12 @@ public class B_Other {
 		s.pop();
 		System.out.println(s); // 0, 1, 2, 5, 6
 		
-		
-		
 	}
+	
 	// 큐(Queue) : 처음에 저장한 것을 제일 먼저 꺼내는 FIFO(First In First Out) 구조
 	public void method3() {
 		
-		// 큐는 인터페이스
+		// 큐는 인터페이스 
 		Queue q = new LinkedList();
 		
 		q.offer(0);
@@ -72,6 +70,7 @@ public class B_Other {
 		q.add(7);
 		q.remove();
 		System.out.println(q); // 3, 4, 5, 6, 7
+		
 	}
 	
 	public static void main(String[] args) {

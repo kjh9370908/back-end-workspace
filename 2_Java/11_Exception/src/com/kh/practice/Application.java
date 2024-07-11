@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.kh.practice.controller.MemberController;
 import com.kh.practice.exception.DuplicateNameException;
+import com.kh.practice.exception.RecordNotFoundException;
 import com.kh.practice.model.Member;
 
 public class Application {
@@ -48,45 +49,33 @@ public class Application {
 			System.out.println("9. 끝내기");
 			System.out.print("메뉴 번호 : ");
 			
-			int select = 0;
-			
 			try {
+				int select = Integer.parseInt(sc.nextLine());
 				
-				select = Integer.parseInt(sc.nextLine());
-			
-			
-			
-			
-			
-			
-			int select = Integer.parseInt(sc.nextLine());
-			switch (select) {
-			case 1:
-				insertMember();
-				break;
-			case 2:
-				updateMember();
-				break;
-			case 3:
-				printAll();
-				break;
-			case 9:
-				System.out.println("프로그램 종료");
-				check = false;
-				break;
-			default:
+				switch (select) {
+					case 1:
+						insertMember();
+						break;
+					case 2:
+						updateMember();
+						break;
+					case 3:
+						printAll();
+						break;
+					case 9:
+						System.out.println("프로그램 종료");
+						check = false;
+						break;
+					default:
+						System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
+				}
+
+			} catch(Exception e) {
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
 			}
-		}
-	
-	catch(Exception e) {
-		System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
-	}
-	}
 			
-		
-	
-		
+			
+		}
 	}
 	
 	/*
@@ -106,40 +95,28 @@ public class Application {
 		String id = sc.nextLine();
 		
 		try {
-			if(mc.checkId(id) != -1) {
-				System.out.println("회원 정보가 없습니다.");
-				return;
-				
+			System.out.print("이름 : ");
+			String name = sc.nextLine();
+			System.out.print("비밀번호 : ");
+			String pwd = sc.nextLine();
+			System.out.print("이메일 : ");
+			String email = sc.nextLine();
+			System.out.print("성별(M/F) : ");
+			char gender = sc.nextLine().charAt(0);
+			System.out.print("나이 : ");
+			int age = Integer.parseInt(sc.nextLine());
 			
-				throw new DuplicateNameException();
-			} else {
-				System.out.print("이름 : ");
-				String name = sc.nextLine();
-				System.out.print("비밀번호 : ");
-				String pwd = sc.nextLine();
-				System.out.print("이메일 : ");
-				String email = sc.nextLine();
-				System.out.print("성별(M/F) : ");
-				char gender = sc.nextLine().charAt(0);
-				System.out.print("나이 : ");
-				int age = Integer.parseInt(sc.nextLine());
-				
-				Member m = new Member(id, name, pwd, email, gender, age);
-				mc.insertMember(m);
-			} catch(DuplicateNameException e) {
-				//e.printStackTrace();
-				System.out.println(e.getMessage());
-				insertMember();
-			
+			Member m = new Member(id, name, pwd, email, gender, age);
+			mc.insertMember(m);
+		} catch(DuplicateNameException e) {
+			//e.printStackTrace();
+			System.out.println(e.getMessage());
+			insertMember();
 		}
-		}
-			
-		} 
-			
 		
 		
 		
-		
+	}
 	
 	/*
 	 * 아이디를 입력 받았는데 기존 멤버 배열에 아이디가 없는 경우
@@ -153,17 +130,22 @@ public class Application {
 	public void updateMember() {
 		System.out.print("수정할 회원의 아이디 : ");
 		String id = sc.nextLine();
-		if(mc.checkId(id) == -1) {
-			System.out.println("회원 정보가 없습니다.");
-			return;
+		
+		try {
+			if(mc.checkUpdateId(id) == -1) {
+				System.out.println("회원 정보가 없습니다.");
+				return;
+			}
+			System.out.print("수정할 이름 : ");
+			String name = sc.nextLine();
+			System.out.print("수정할 이메일 : ");
+			String email = sc.nextLine();
+			System.out.print("수정할 비밀번호 : ");
+			String pwd = sc.nextLine();
+			mc.updateMember(id, name, email, pwd);
+		} catch(RecordNotFoundException e) {
+			e.printStackTrace();
 		}
-		System.out.print("수정할 이름 : ");
-		String name = sc.nextLine();
-		System.out.print("수정할 이메일 : ");
-		String email = sc.nextLine();
-		System.out.print("수정할 비밀번호 : ");
-		String pwd = sc.nextLine();
-		mc.updateMember(id, name, email, pwd);
 	}
 
 	/*

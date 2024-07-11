@@ -1,7 +1,9 @@
 package com.kh.exception;
 
-public class E_SuperClass {
-	
-	public void method() throw IOException{}
+import java.io.IOException;
 
+public class E_SuperClass {
+
+	public void method() throws IOException {}
+	
 }

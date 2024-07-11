@@ -2,10 +2,12 @@ package com.kh.example.practice1;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.TreeSet;
 
-public class Application{
-	
+public class Application {
+
 	public static void main(String[] args) {
 		
 		ArrayList<Integer> lotto = new ArrayList<Integer>();
@@ -16,14 +18,15 @@ public class Application{
 			int num = (int) (Math.random() * 45 + 1);
 			if(!lotto.contains(num)) {
 				lotto.add(num);
-
 			}
 			
 		}
 		
-		// 0 ~ 6 까지 번위 지정해서 로또 번호 6개 따로, 보너스 번호 따로!
+		// 0 ~ 6까지 범위 지정해서 로또 번호 6개 따로, 보너스 번호 따로!
 		List<Integer> lottoList = lotto.subList(0, 6);
 		int bonus = lotto.get(6);
+		
+		
 		
 		int count = 0;
 		
@@ -70,33 +73,22 @@ public class Application{
 				}
 			} else if(match == 4) {
 				System.out.println("4등 당첨! 횟수 : " + count);
-					break;
+				break;
 			} else if(match == 3) {
 				System.out.println("5등 당첨! 횟수 : " + count);
 				break;
-				
 			}
+			
+			
 		}
 		
 		
-		
+
 	}
-	
+
 }
 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
-		
+
+

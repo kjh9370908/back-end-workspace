@@ -1,17 +1,17 @@
 package com.kh.map.model;
 
 public class Snack {
-	
+
 	private String flavor;
 	private int calorie;
 	
+	public Snack() {
+	}
 	public Snack(String flavor, int calorie) {
-		super();
 		this.flavor = flavor;
 		this.calorie = calorie;
 	}
-	public Snack() {
-	}
+	
 	public String getFlavor() {
 		return flavor;
 	}
@@ -24,11 +24,9 @@ public class Snack {
 	public void setCalorie(int calorie) {
 		this.calorie = calorie;
 	}
+	
 	@Override
 	public String toString() {
 		return "Snack [flavor=" + flavor + ", calorie=" + calorie + "]";
 	}
-	
-	
-
 }

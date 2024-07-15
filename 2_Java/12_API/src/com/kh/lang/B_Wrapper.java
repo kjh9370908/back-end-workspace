@@ -1,20 +1,18 @@
 package com.kh.lang;
 
 public class B_Wrapper {
-
 	
 	public static void main(String[] args) {
 		//int -> Integer
 		int iNum1 = 3;
 		// Deprecated : 기능은 있지만 비권장
 		Integer int1 = new Integer(iNum1); // Boxing : 기본 자료형 -> Wrapper 클래스
-		int1 = 3;						   // UnBoxing : Wrapper 클래스 -> 기본 자료형
+		int1 = 3;                          // UnBoxing : Wrapper 클래스 -> 기본 자료형
 		
 		//double -> Double
 		double dNum2 = 3.14;
 		Double double2 = new Double(dNum2);
 		double2 = 3.14;
-		
 		
 		//char -> Character
 		char ch3 = 'a';
@@ -29,7 +27,7 @@ public class B_Wrapper {
 		// 2. 기본 자료형을 문자열로 변경
 		System.out.println(iNum + dNum); // 54.78
 		
-		// String의 valueOf()
+		// String의 valueOf() 
 		String str1 = String.valueOf(iNum);
 		String str2 = String.valueOf(dNum);
 		
@@ -42,6 +40,6 @@ public class B_Wrapper {
 		System.out.println(str3 + str4); // 2034.78
 		
 		
-		
 	}
+
 }

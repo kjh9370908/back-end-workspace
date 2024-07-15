@@ -20,7 +20,7 @@ public class B_Sorted {
 		names.stream()
 		.sorted() // 오름차순 정렬
 		.sorted(Comparator.reverseOrder()) // 내림차순 정렬
-		.forEach(name -> System.out.println(name + " "));
+		.forEach(name -> System.out.print(name + " "));
 		
 		
 		List<Student> students = Arrays.asList(
@@ -29,16 +29,12 @@ public class B_Sorted {
 				new Student("김경주", 18, "여자", 50, 100),
 				new Student("주준영", 21, "남자", 60, 45),
 				new Student("조창현", 19, "남자", 70, 90),
-				new Student("김진주", 22, "남자", 80, 50),
-				new Student("주준영", 21, "남자", 60, 45),
-				new Student("조창현", 19, "남자", 70, 90),
-				new Student("김진주", 22, "남자", 80, 50)
+				new Student("김진주", 22, "여자", 80, 50)
 				);
-		
 		students.stream()
-		.sorted()
-		.forEach(student -> System.out.println(student));
-				
+			.sorted()
+			.forEach(student -> System.out.println(student));
+		
 	}
 
 }
